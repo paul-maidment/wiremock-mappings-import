@@ -1,0 +1,1436 @@
+{
+  "mappings" : [ {
+    "id" : "fe46ec9d-68c7-4a04-b885-44d955af7187",
+    "request" : {
+      "url" : "/api/authorizations/v1/access_review",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"resource_type\":\"BareMetalCluster\",\"action\":\"create\",\"account_username\":\"jdoe123@example.com\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"allowed\":true}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "fe46ec9d-68c7-4a04-b885-44d955af7187"
+  }, {
+    "id" : "8f471916-17a2-4ef8-bc87-2054af2cfa41",
+    "request" : {
+      "url" : "/api/authorizations/v1/access_review",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"resource_type\":\"BareMetalCluster\",\"action\":\"create\",\"account_username\":\"bob@example.com\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"allowed\":true}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8f471916-17a2-4ef8-bc87-2054af2cfa41"
+  }, {
+    "id" : "24660b49-6e09-42f5-a108-5e3333060ccc",
+    "request" : {
+      "url" : "/api/authorizations/v1/capability_review",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"capability\":\"bare_metal_installer_admin\",\"type\":\"Account\",\"account_username\":\"jdoe123@example.com\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"result\":\"false\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "24660b49-6e09-42f5-a108-5e3333060ccc"
+  }, {
+    "id" : "490cc887-3ec7-44a9-8bb6-b37a1dfdc6bb",
+    "request" : {
+      "url" : "/api/authorizations/v1/capability_review",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"capability\":\"bare_metal_installer_admin\",\"type\":\"Account\",\"account_username\":\"bob@example.com\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"result\":\"false\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "490cc887-3ec7-44a9-8bb6-b37a1dfdc6bb"
+  }, {
+    "id" : "eb5149e5-71f0-43cd-828f-817eced45f6e",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/token_authorization",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"authorization_token\":\"dXNlcjpwYXNzd29yZAo=\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"account\":{\"first_name\":\"UserFirstName\",\"last_name\":\"UserLastName\",\"username\":\"jdoe123@example.com\",\"email\":\"user@myorg.com\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "eb5149e5-71f0-43cd-828f-817eced45f6e"
+  }, {
+    "id" : "e91826b3-d01d-4e06-aab1-d5c25d3eb622",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/token_authorization",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"authorization_token\":\"dXNlcjI6cGFzc3dvcmQK\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"account\":{\"first_name\":\"UserFirstName\",\"last_name\":\"UserLastName\",\"username\":\"bob@example.com\",\"email\":\"user@myorg.com\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e91826b3-d01d-4e06-aab1-d5c25d3eb622"
+  }, {
+    "id" : "0a140b69-43a3-4fe6-a9ca-c8341ed2a326",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/token_authorization",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"authorization_token\":\"dXNlcjpwYXNzd29yZAy=\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"account\":{\"first_name\":\"UserFirstName\",\"last_name\":\"UserLastName\",\"username\":\"admin@example.com\",\"email\":\"user@myorg.com\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0a140b69-43a3-4fe6-a9ca-c8341ed2a326"
+  }, {
+    "id" : "d9c62449-13d8-4a3b-8405-07404c7592cc",
+    "request" : {
+      "url" : "/token",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"access_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IlZBUVozV0RUSVlGV0tSTUQiLCJ0eXAiOiJKV1QifQ.eyJhY2NvdW50X2lkIjoiNzY1NDMyMSIsImFjY291bnRfbnVtYmVyIjoiMTIzNDU2NyIsImNsaWVudElkIjoiMTIzNCIsImVtYWlsIjoiamRvZTEyM0BleGFtcGxlLmNvbSIsImZpcnN0X25hbWUiOiJKb2huIiwiaXNfYWN0aXZlIjp0cnVlLCJpc19pbnRlcm5hbCI6ZmFsc2UsImlzX29yZ19hZG1pbiI6ZmFsc2UsImxhc3RfbmFtZSI6IkRvZSIsImxvY2FsZSI6ImVuX1VTIiwib3JnX2lkIjoiMTAxMDEwMSIsInR5cGUiOiJVc2VyIiwidXNlcm5hbWUiOiJqZG9lMTIzQGV4YW1wbGUuY29tIn0.gKurP3uE5mbD-R-yW9FPKN1fSOZ25Nf-rJu7q4MwJ9kGjXt60hmgkX173SNH-ABkbH5oJ7bLHD5kHC8uv9IxgeMsv3dng_lHUwkeJlkxQKQdZHHNTmdyE8_bMwDqo4OF7V2aJdx1Jfn754vR4k_mQaxm-4FSxWpOM3Zum54_-1Y938sIZ0jwBJkgu4aafhpr9vUDGCHLmUEjQ1FvenNTP7vUTsCtrn4nfCgczxqx5fJJTFBaWtIdDriPKu6o2Iy2VIbF-L3P6mONHDFNrk8EcpM4wlFRidCibMvUb7lJCtJ-WWxIN0g2wXOxnVRvqxBrheJRCR5DDZkrKbxm4xfXUw\",\"refresh_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IlZBUVozV0RUSVlGV0tSTUQiLCJ0eXAiOiJKV1QifQ.eyJhY2NvdW50X2lkIjoiNzY1NDMyMSIsImFjY291bnRfbnVtYmVyIjoiMTIzNDU2NyIsImNsaWVudElkIjoiMTIzNCIsImVtYWlsIjoiamRvZTEyM0BleGFtcGxlLmNvbSIsImZpcnN0X25hbWUiOiJKb2huIiwiaXNfYWN0aXZlIjp0cnVlLCJpc19pbnRlcm5hbCI6ZmFsc2UsImlzX29yZ19hZG1pbiI6ZmFsc2UsImxhc3RfbmFtZSI6IkRvZSIsImxvY2FsZSI6ImVuX1VTIiwib3JnX2lkIjoiMTAxMDEwMSIsInR5cGUiOiJVc2VyIiwidXNlcm5hbWUiOiJqZG9lMTIzQGV4YW1wbGUuY29tIn0.gKurP3uE5mbD-R-yW9FPKN1fSOZ25Nf-rJu7q4MwJ9kGjXt60hmgkX173SNH-ABkbH5oJ7bLHD5kHC8uv9IxgeMsv3dng_lHUwkeJlkxQKQdZHHNTmdyE8_bMwDqo4OF7V2aJdx1Jfn754vR4k_mQaxm-4FSxWpOM3Zum54_-1Y938sIZ0jwBJkgu4aafhpr9vUDGCHLmUEjQ1FvenNTP7vUTsCtrn4nfCgczxqx5fJJTFBaWtIdDriPKu6o2Iy2VIbF-L3P6mONHDFNrk8EcpM4wlFRidCibMvUb7lJCtJ-WWxIN0g2wXOxnVRvqxBrheJRCR5DDZkrKbxm4xfXUw\",\"token_type\":\"bearer\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d9c62449-13d8-4a3b-8405-07404c7592cc"
+  }, {
+    "id" : "32367e30-e552-414d-b41a-752cd9211a55",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/cluster_authorizations",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"account_username\":\"${json-unit.any-string}\",\"product_category\":\"AssistedInstall\",\"product_id\":\"OCP\",\"cluster_id\":\"${json-unit.any-string}\",\"managed\":false,\"resources\":[],\"reserve\":true,\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"subscription\":{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "32367e30-e552-414d-b41a-752cd9211a55"
+  }, {
+    "id" : "3cf7c9a7-c3e0-45bf-a26f-7c721895a2e7",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"Reserved\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "3cf7c9a7-c3e0-45bf-a26f-7c721895a2e7"
+  }, {
+    "id" : "cae8bf69-fc55-4314-aed2-78c7f2c72a15",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cae8bf69-fc55-4314-aed2-78c7f2c72a15"
+  }, {
+    "id" : "33652e0f-6b0d-45ef-8916-761808e50afa",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"console_url\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "33652e0f-6b0d-45ef-8916-761808e50afa"
+  }, {
+    "id" : "83415af7-581b-4348-b4c1-2968f0018c40",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"external_cluster_id\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "83415af7-581b-4348-b4c1-2968f0018c40"
+  }, {
+    "id" : "374af62d-55e6-486f-a9ee-98c941f4b8ec",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"status\":\"Active\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "374af62d-55e6-486f-a9ee-98c941f4b8ec"
+  }, {
+    "id" : "27e06f74-2ce8-4b8c-b74b-8ae2b2160a41",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "27e06f74-2ce8-4b8c-b74b-8ae2b2160a41"
+  }, {
+    "id" : "6e4c13da-43e0-4fb8-8730-6730071eed67",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/cluster_authorizations",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"account_username\":\"${json-unit.any-string}\",\"product_category\":\"AssistedInstall\",\"product_id\":\"OCP\",\"cluster_id\":\"${json-unit.any-string}\",\"managed\":false,\"resources\":[],\"reserve\":true,\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"subscription\":{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6e4c13da-43e0-4fb8-8730-6730071eed67"
+  }, {
+    "id" : "419a1027-b3c8-4ef7-81cb-fced7e149213",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "419a1027-b3c8-4ef7-81cb-fced7e149213"
+  }, {
+    "id" : "b1937021-cfca-4166-9870-34951f131f8c",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"Reserved\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b1937021-cfca-4166-9870-34951f131f8c"
+  }, {
+    "id" : "a3840a68-7970-47d1-bbe7-524de0db6cdf",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a3840a68-7970-47d1-bbe7-524de0db6cdf"
+  }, {
+    "id" : "0ca54c95-da7b-4c35-b85e-8d5b2f11cff9",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"external_cluster_id\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0ca54c95-da7b-4c35-b85e-8d5b2f11cff9"
+  }, {
+    "id" : "16bf0b5e-8bd9-434a-b875-01afd2350304",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/cluster_authorizations",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"account_username\":\"${json-unit.any-string}\",\"product_category\":\"AssistedInstall\",\"product_id\":\"OCP\",\"cluster_id\":\"${json-unit.any-string}\",\"managed\":false,\"resources\":[],\"reserve\":true,\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\"subscription\":{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "16bf0b5e-8bd9-434a-b875-01afd2350304"
+  }, {
+    "id" : "68ca56e3-885c-43b0-b6a2-c6c5d44ec5f6",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/cluster_authorizations",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"account_username\":\"${json-unit.any-string}\",\"product_category\":\"AssistedInstall\",\"product_id\":\"OCP\",\"cluster_id\":\"${json-unit.any-string}\",\"managed\":false,\"resources\":[],\"reserve\":true,\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 503,
+      "body" : "{\"subscription\":{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "68ca56e3-885c-43b0-b6a2-c6c5d44ec5f6"
+  }, {
+    "id" : "428361e2-5909-4671-b2e2-3eba431a910a",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/cluster_authorizations",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"account_username\":\"${json-unit.any-string}\",\"product_category\":\"AssistedInstall\",\"product_id\":\"OCP\",\"cluster_id\":\"${json-unit.any-string}\",\"managed\":false,\"resources\":[],\"reserve\":true,\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"subscription\":{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "428361e2-5909-4671-b2e2-3eba431a910a"
+  }, {
+    "id" : "ae147430-0904-4523-8ee1-a764c92dd51e",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ae147430-0904-4523-8ee1-a764c92dd51e"
+  }, {
+    "id" : "b81c7859-c054-47a6-8ee3-8249eecaf41f",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"Reserved\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b81c7859-c054-47a6-8ee3-8249eecaf41f"
+  }, {
+    "id" : "dbbb5750-824d-4f9e-8bcb-ac9c63960fbe",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "dbbb5750-824d-4f9e-8bcb-ac9c63960fbe"
+  }, {
+    "id" : "ccbb93d8-f60e-413c-8d47-45d07b5464e7",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"external_cluster_id\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ccbb93d8-f60e-413c-8d47-45d07b5464e7"
+  }, {
+    "id" : "476a2e4e-647e-4380-8951-d4548a538db0",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "476a2e4e-647e-4380-8951-d4548a538db0"
+  }, {
+    "id" : "e381c99c-7a8e-4985-b468-22c7dae0fe65",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/cluster_authorizations",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"account_username\":\"${json-unit.any-string}\",\"product_category\":\"AssistedInstall\",\"product_id\":\"OCP\",\"cluster_id\":\"${json-unit.any-string}\",\"managed\":false,\"resources\":[],\"reserve\":true,\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"subscription\":{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e381c99c-7a8e-4985-b468-22c7dae0fe65"
+  }, {
+    "id" : "38542649-d93d-4cf0-81da-a7e7f64f1680",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "38542649-d93d-4cf0-81da-a7e7f64f1680"
+  }, {
+    "id" : "cde054af-5be8-4c39-8142-364803f495ed",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"Reserved\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cde054af-5be8-4c39-8142-364803f495ed"
+  }, {
+    "id" : "b91bc20a-f8d7-4d4e-b87b-060a38e399e4",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "b91bc20a-f8d7-4d4e-b87b-060a38e399e4"
+  }, {
+    "id" : "621c85cf-4941-4c7e-8b65-9af49336da53",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"external_cluster_id\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "621c85cf-4941-4c7e-8b65-9af49336da53"
+  }, {
+    "id" : "80f30d7a-4d72-4b49-9f90-2920ce1de281",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"Active\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "80f30d7a-4d72-4b49-9f90-2920ce1de281"
+  }, {
+    "id" : "c0295cb2-6ec3-4ec4-93d8-a4631980b67f",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c0295cb2-6ec3-4ec4-93d8-a4631980b67f"
+  }, {
+    "id" : "cd77b5cd-2c94-4dbc-9040-0120886fa9a0",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/cluster_authorizations",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"account_username\":\"${json-unit.any-string}\",\"product_category\":\"AssistedInstall\",\"product_id\":\"OCP\",\"cluster_id\":\"${json-unit.any-string}\",\"managed\":false,\"resources\":[],\"reserve\":true,\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"subscription\":{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cd77b5cd-2c94-4dbc-9040-0120886fa9a0"
+  }, {
+    "id" : "7a08e204-f4b6-4bc2-a266-137641f781ba",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7a08e204-f4b6-4bc2-a266-137641f781ba"
+  }, {
+    "id" : "4f2e9c99-f3a3-43d0-bf7b-7931f4683359",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"Reserved\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4f2e9c99-f3a3-43d0-bf7b-7931f4683359"
+  }, {
+    "id" : "1869e581-09eb-46b0-a7b3-9f57a0097fc6",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "1869e581-09eb-46b0-a7b3-9f57a0097fc6"
+  }, {
+    "id" : "a6827657-d684-4c2e-9f2a-b4a6258ac76a",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"external_cluster_id\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a6827657-d684-4c2e-9f2a-b4a6258ac76a"
+  }, {
+    "id" : "f9d8d9ea-3fb9-45d4-b5b2-51c49cc99a89",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"Reserved\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f9d8d9ea-3fb9-45d4-b5b2-51c49cc99a89"
+  }, {
+    "id" : "125572ce-cdb8-4854-98d2-36d62f5c0a61",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 503,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"Reserved\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "125572ce-cdb8-4854-98d2-36d62f5c0a61"
+  }, {
+    "id" : "d394b8b0-ae2c-497c-8dfa-231acd9463e1",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/cluster_authorizations",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"account_username\":\"${json-unit.any-string}\",\"product_category\":\"AssistedInstall\",\"product_id\":\"OCP\",\"cluster_id\":\"${json-unit.any-string}\",\"managed\":false,\"resources\":[],\"reserve\":true,\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"subscription\":{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d394b8b0-ae2c-497c-8dfa-231acd9463e1"
+  }, {
+    "id" : "7518dc1d-4130-46bf-8593-8368c92629c2",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7518dc1d-4130-46bf-8593-8368c92629c2"
+  }, {
+    "id" : "a38c4b6d-362e-4da3-9d85-39e55df9054d",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"Reserved\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a38c4b6d-362e-4da3-9d85-39e55df9054d"
+  }, {
+    "id" : "4176b705-f0d0-4336-8155-4ce4633ac2eb",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4176b705-f0d0-4336-8155-4ce4633ac2eb"
+  }, {
+    "id" : "7b6221d9-f852-445f-a52c-ea3d962abddf",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"external_cluster_id\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "7b6221d9-f852-445f-a52c-ea3d962abddf"
+  }, {
+    "id" : "e1596c65-fd25-4da3-89f9-6c28090f0933",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e1596c65-fd25-4da3-89f9-6c28090f0933"
+  }, {
+    "id" : "25f06981-a43b-41d2-8ea4-bb7409844406",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 503,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "25f06981-a43b-41d2-8ea4-bb7409844406"
+  }, {
+    "id" : "8a868d3a-68f7-4e8c-95ac-e43887e757c8",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/cluster_authorizations",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"account_username\":\"${json-unit.any-string}\",\"product_category\":\"AssistedInstall\",\"product_id\":\"OCP\",\"cluster_id\":\"${json-unit.any-string}\",\"managed\":false,\"resources\":[],\"reserve\":true,\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"subscription\":{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8a868d3a-68f7-4e8c-95ac-e43887e757c8"
+  }, {
+    "id" : "e7eddb65-e962-4c40-8781-ee6bdc27acc6",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e7eddb65-e962-4c40-8781-ee6bdc27acc6"
+  }, {
+    "id" : "10d39e30-5c72-4170-abe0-01034b161547",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"Reserved\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "10d39e30-5c72-4170-abe0-01034b161547"
+  }, {
+    "id" : "8f22cfd2-de72-453b-8766-a67bd1329f3e",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "8f22cfd2-de72-453b-8766-a67bd1329f3e"
+  }, {
+    "id" : "655a9184-d1b6-4ca9-b5db-5e5a8f57d6e0",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"external_cluster_id\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "655a9184-d1b6-4ca9-b5db-5e5a8f57d6e0"
+  }, {
+    "id" : "047df7a0-654f-4555-b853-6c255acbc989",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/cluster_authorizations",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"account_username\":\"${json-unit.any-string}\",\"product_category\":\"AssistedInstall\",\"product_id\":\"OCP\",\"cluster_id\":\"${json-unit.any-string}\",\"managed\":false,\"resources\":[],\"reserve\":true,\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"subscription\":{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "047df7a0-654f-4555-b853-6c255acbc989"
+  }, {
+    "id" : "72b07646-d91a-4ca8-a153-84140aa5df7f",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "72b07646-d91a-4ca8-a153-84140aa5df7f"
+  }, {
+    "id" : "f3e4ee40-be98-40a0-bc7f-f8492310e756",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"Reserved\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f3e4ee40-be98-40a0-bc7f-f8492310e756"
+  }, {
+    "id" : "50e91bb0-873a-4b78-afe8-b18f2f7aec4a",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "50e91bb0-873a-4b78-afe8-b18f2f7aec4a"
+  }, {
+    "id" : "51f59c68-7cb3-410d-9061-2c0cc41def15",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"external_cluster_id\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "51f59c68-7cb3-410d-9061-2c0cc41def15"
+  }, {
+    "id" : "30ab6002-5478-4218-94b9-4425779804bb",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "30ab6002-5478-4218-94b9-4425779804bb"
+  }, {
+    "id" : "80dc2284-a63d-49a1-9fde-3ea713346696",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/cluster_authorizations",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"account_username\":\"${json-unit.any-string}\",\"product_category\":\"AssistedInstall\",\"product_id\":\"OCP\",\"cluster_id\":\"${json-unit.any-string}\",\"managed\":false,\"resources\":[],\"reserve\":true,\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"subscription\":{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "80dc2284-a63d-49a1-9fde-3ea713346696"
+  }, {
+    "id" : "a5619e0a-ed6b-4d18-b670-adf2af9300f1",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a5619e0a-ed6b-4d18-b670-adf2af9300f1"
+  }, {
+    "id" : "941468c6-bce4-453e-b6de-8be320251a39",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"Reserved\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "941468c6-bce4-453e-b6de-8be320251a39"
+  }, {
+    "id" : "c1e11b0b-5f81-4fe9-8150-7f77e4d39e4c",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "c1e11b0b-5f81-4fe9-8150-7f77e4d39e4c"
+  }, {
+    "id" : "4176db8b-04a6-4dc0-8a58-4279a14e0094",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"external_cluster_id\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "4176db8b-04a6-4dc0-8a58-4279a14e0094"
+  }, {
+    "id" : "6aea960c-de49-4d31-af32-cca93f0c4a88",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/cluster_authorizations",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"account_username\":\"${json-unit.any-string}\",\"product_category\":\"AssistedInstall\",\"product_id\":\"OCP\",\"cluster_id\":\"${json-unit.any-string}\",\"managed\":false,\"resources\":[],\"reserve\":true,\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"subscription\":{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "6aea960c-de49-4d31-af32-cca93f0c4a88"
+  }, {
+    "id" : "137ae5fa-fd87-44d5-8b61-1fb2314e2fbf",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "137ae5fa-fd87-44d5-8b61-1fb2314e2fbf"
+  }, {
+    "id" : "e92974c3-1c24-4ef0-8ac1-f80c781b40a2",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"Reserved\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e92974c3-1c24-4ef0-8ac1-f80c781b40a2"
+  }, {
+    "id" : "d50e42c1-6b3f-41ca-b6ae-2a0d35e61141",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d50e42c1-6b3f-41ca-b6ae-2a0d35e61141"
+  }, {
+    "id" : "d0317f93-3f4f-4144-8c86-a54929a46b93",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"external_cluster_id\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d0317f93-3f4f-4144-8c86-a54929a46b93"
+  }, {
+    "id" : "5be64ecd-e4ca-4305-a84e-446ea61c451f",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "5be64ecd-e4ca-4305-a84e-446ea61c451f"
+  }, {
+    "id" : "cd70bad9-fbd2-4be4-964d-a7b72736f407",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/cluster_authorizations",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"account_username\":\"${json-unit.any-string}\",\"product_category\":\"AssistedInstall\",\"product_id\":\"OCP\",\"cluster_id\":\"${json-unit.any-string}\",\"managed\":false,\"resources\":[],\"reserve\":true,\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"subscription\":{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "cd70bad9-fbd2-4be4-964d-a7b72736f407"
+  }, {
+    "id" : "48768894-1689-4248-b63a-f4031c94fb8a",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "48768894-1689-4248-b63a-f4031c94fb8a"
+  }, {
+    "id" : "d06de4dc-2cfc-45f7-aaa9-62f33ac8198c",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"Reserved\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "d06de4dc-2cfc-45f7-aaa9-62f33ac8198c"
+  }, {
+    "id" : "ea4f95cf-8afc-4cfe-aa50-1bfc33a78d72",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ea4f95cf-8afc-4cfe-aa50-1bfc33a78d72"
+  }, {
+    "id" : "717ff2b4-403b-47c0-83bc-22965891c269",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"external_cluster_id\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "717ff2b4-403b-47c0-83bc-22965891c269"
+  }, {
+    "id" : "f65d79c7-f5a2-4362-8c7f-beed7b3e03df",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/cluster_authorizations",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"account_username\":\"${json-unit.any-string}\",\"product_category\":\"AssistedInstall\",\"product_id\":\"OCP\",\"cluster_id\":\"${json-unit.any-string}\",\"managed\":false,\"resources\":[],\"reserve\":true,\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"subscription\":{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f65d79c7-f5a2-4362-8c7f-beed7b3e03df"
+  }, {
+    "id" : "15b5dd71-423b-4c5d-ac69-8af43de25758",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "15b5dd71-423b-4c5d-ac69-8af43de25758"
+  }, {
+    "id" : "e80b00d6-e609-46cf-9b98-4256fad805e7",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"Reserved\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e80b00d6-e609-46cf-9b98-4256fad805e7"
+  }, {
+    "id" : "a50b2894-a123-43c2-a10e-6a3f23c6eb5c",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a50b2894-a123-43c2-a10e-6a3f23c6eb5c"
+  }, {
+    "id" : "f6713066-3582-4b1d-ba61-e82a3f915836",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"external_cluster_id\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "f6713066-3582-4b1d-ba61-e82a3f915836"
+  }, {
+    "id" : "a3aec101-d653-4dbf-921e-27f84115d635",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"external_cluster_id\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 401,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "a3aec101-d653-4dbf-921e-27f84115d635"
+  }, {
+    "id" : "126d85d3-82e7-45d8-9726-59dd584ef56d",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/cluster_authorizations",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"account_username\":\"${json-unit.any-string}\",\"product_category\":\"AssistedInstall\",\"product_id\":\"OCP\",\"cluster_id\":\"${json-unit.any-string}\",\"managed\":false,\"resources\":[],\"reserve\":true,\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"subscription\":{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "126d85d3-82e7-45d8-9726-59dd584ef56d"
+  }, {
+    "id" : "adb17eeb-17e9-4f39-b555-0aab4001be4d",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "adb17eeb-17e9-4f39-b555-0aab4001be4d"
+  }, {
+    "id" : "99fcd82a-e356-4147-8f4c-29c8387e04e9",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"Reserved\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "99fcd82a-e356-4147-8f4c-29c8387e04e9"
+  }, {
+    "id" : "0310a215-4aee-4a06-95c4-ef6edeb8ecc7",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"display_name\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "0310a215-4aee-4a06-95c4-ef6edeb8ecc7"
+  }, {
+    "id" : "727ae88c-71a5-40e5-a92e-a83a9c0571b4",
+    "request" : {
+      "url" : "/api/accounts_mgmt/v1/subscriptions/1h89fvtqeelulpo0fl5oddngj2ao7tt8",
+      "method" : "PATCH",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\"external_cluster_id\":\"${json-unit.any-string}\"}",
+        "ignoreExtraElements" : true
+      } ]
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\"id\":\"1h89fvtqeelulpo0fl5oddngj2ao7tt8\",\"status\":\"\"}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "727ae88c-71a5-40e5-a92e-a83a9c0571b4"
+  } ],
+  "meta" : {
+    "total" : 87
+  }
+}
